@@ -1,0 +1,9 @@
+defaults:
+  - base
+  - _self_
+
+dataset:
+  param:
+    day_gap: 7
+    session_min: 2
+    batch_size: 4096

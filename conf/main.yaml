@@ -1,0 +1,22 @@
+defaults:
+  - base
+  - _self_
+
+train:
+  param:
+    num_epochs: 100
+
+  model:
+    hidden_size: 128
+    num_layers: 1
+    embed_size:
+      cat: 100
+      user: 50
+      hour: 20
+
+  loss:
+    type: "NUL"
+    alpha: 0.01
+
+  opt:
+    lr: 0.001

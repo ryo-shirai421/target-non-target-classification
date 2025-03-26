@@ -1,0 +1,27 @@
+const:
+  seed: 0
+  folds: 4
+  unlabel_cat: "Community_and_Government"
+  vocab:
+    hour: 24
+    user: 1083
+    cat: 9 # 9 (Num of Check-in Categories) - len(unlabel_cat)
+  sample:
+    frac: 0.8
+
+path:
+  root: "."
+  folder:
+    data: "${path.root}/data"
+    formatted: "${path.folder.data}/formatted"
+    loader: "${path.folder.data}/dataloader"
+    result: "${path.root}/result"
+    mlruns: "${path.root}/mlruns"
+  file:
+    data: "${path.folder.data}/csv/data.csv"
+    checkin: "${path.folder.formatted}/checkin.csv"
+    gps: "${path.folder.formatted}/gps.csv"
+
+hydra:
+  job:
+    chdir: False
